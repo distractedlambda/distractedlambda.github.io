@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "Roboto Slab";
+    src: url("Roboto_Slab/RobotoSlab-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    font-variant: normal;
+    font-style: normal;
+}
+
+a:hover {
+    color: royalblue;
+}
+
+br {
+    display: none;
+}
+
+body {
+    display: grid;
+    margin: 30px;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#headshot {
+    border-radius: 5%;
+    width: 300px;
+    aspect-ratio: auto;
+}
+
+#about-me {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 10px;
+}
+
+#name {
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 350;
+    font-size: 40px;
+    font-variant: small-caps;
+}
+
+#position {
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+#contact-badges {
+    display: grid;
+    grid-auto-flow: column;
+    margin-top: 5px;
+    column-gap: 10px;
+}
+
+#contact-badges svg {
+    height: 30px;
+}
+
+#intro {
+    font-family: "Roboto Slab", sans-serif;
+    max-width: 800px;
+    justify-self: center;
+    font-weight: 350;
+}
+
+#intro > p {
+    margin-top: 20px;
+    font-size: 14pt;
+}
+
+#intro > p > a {
+    font-weight: 550;
+}
+
+/* "Narrow" Displays */
+@media not (min-width: 800px) {
+    #headshot {
+        justify-self: center;
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    #about-me {
+        justify-self: center;
+        grid-row: 2;
+        grid-column: 1;
+        justify-items: center;
+        border-top: 3px solid black;
+        padding-top: 5px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    #intro {
+        grid-row: 3;
+        grid-column: 1;
+    }
+}
+
+/* "Wide" Displays */
+@media (min-width: 800px) {
+    #headshot {
+        grid-row: 1;
+        grid-column: 1;
+        justify-self: right;
+    }
+
+    #about-me {
+        grid-row: 1;
+        grid-column: 2;
+        align-self: center;
+        align-items: center;
+        justify-items: left;
+        padding-left: 20px;
+        border-left: 3px solid black;
+    }
+
+    #intro {
+        grid-row: 2;
+        grid-column: 1 / 3;
+    }
+}
